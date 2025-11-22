@@ -1,0 +1,104 @@
+# Acolher+ | Sistema de Gestão de Visitantes
+
+![Dashboard Acolher+](https://via.placeholder.com/800x400.png?text=Adicione+um+print+do+seu+Dashboard+aqui)
+
+O **Acolher+** é uma aplicação web full-stack projetada para auxiliar igrejas e pequenas comunidades a gerenciar o cadastro e o acompanhamento de seus visitantes. A ferramenta centraliza as informações, fornece insights visuais através de um dashboard e facilita a comunicação com os visitantes.
+
+---
+
+## ✨ Funcionalidades Principais
+
+- **Dashboard Interativo**: Visualização rápida de estatísticas importantes, como total de visitantes, novos visitantes no mês e status de acompanhamento.
+- **Cadastro Completo de Visitantes (CRUD)**:
+  - **Criação**: Adicione novos visitantes através de um formulário simples e intuitivo.
+  - **Leitura**: Liste todos os visitantes cadastrados em formato de cards.
+  - **Atualização**: Edite informações de um visitante a qualquer momento.
+  - **Exclusão**: Remova registros de visitantes.
+- **Gráficos Dinâmicos**: Gráficos de barras e rosca (gerados com Chart.js) para analisar a frequência de visitas e o status de integração dos visitantes.
+- **Modelos de Mensagens**: Seção com mensagens pré-definidas (boas-vindas, convite, etc.) para facilitar o contato via WhatsApp.
+- **Persistência de Dados**: As informações são salvas em um backend Node.js, garantindo que os dados não sejam perdidos.
+- **Interface Responsiva**: Design limpo e que se adapta a diferentes tamanhos de tela.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+O projeto é dividido em duas partes principais: o frontend (o que o usuário vê no navegador) e o backend (o servidor que gerencia os dados).
+
+### Frontend
+- **HTML5**: Estrutura semântica da aplicação.
+- **CSS3**: Estilização moderna, utilizando Flexbox e Grid Layout para uma interface responsiva.
+- **JavaScript (ES6+)**: Manipulação do DOM, interatividade, e comunicação com a API via `fetch`.
+- **Chart.js**: Biblioteca para a criação dos gráficos do dashboard.
+
+### Backend
+- **Node.js**: Ambiente de execução para o JavaScript no lado do servidor.
+- **Express.js**: Framework para a criação do servidor web e das rotas da API.
+
+### Armazenamento de Dados
+- **Arquivo JSON (`data.json`)**: Utilizado como um banco de dados simples para persistir as informações dos visitantes e as mensagens.
+
+---
+
+## ⚙️ Como Executar o Projeto Localmente
+
+Siga os passos abaixo para rodar a aplicação em sua máquina.
+
+### Pré-requisitos
+
+- **Node.js**: É necessário ter o Node.js instalado. Você pode baixá-lo aqui. O `npm` (Node Package Manager) já vem incluído na instalação.
+
+### Passos para Instalação
+
+1.  **Clone o repositório** (ou baixe os arquivos para uma pasta em seu computador):
+    ```bash
+    git clone https://github.com/seu-usuario/acolher-plus.git
+    ```
+
+2.  **Navegue até a pasta do projeto** pelo terminal:
+    ```bash
+    cd acolher-plus
+    ```
+
+3.  **Instale as dependências** do backend (o Express.js):
+    ```bash
+    npm install
+    ```
+
+4.  **Inicie o servidor**:
+    ```bash
+    npm start
+    ```
+
+5.  **Acesse a aplicação**: Abra seu navegador e acesse o endereço abaixo.
+    > `http://localhost:3000`
+
+O servidor estará rodando e servindo a aplicação. Todas as alterações feitas (novos cadastros, edições, etc.) serão salvas no arquivo `data.json`.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+├── 📂 Acolher +/
+│   ├── 📄 index.html         # Estrutura principal da página
+│   ├── 📄 style.css          # Folha de estilos
+│   ├── 📄 script.js          # Lógica do frontend e interações
+│   ├── 📄 server.js          # Servidor backend (Node.js/Express)
+│   ├── 📄 data.json           # Arquivo de "banco de dados"
+│   ├── 📄 package.json        # Metadados e dependências do projeto
+│   └── 📄 README.md           # Este arquivo
+```
+
+---
+
+## 🔮 Próximos Passos e Melhorias
+
+- [ ] Implementar um banco de dados real (como **SQLite** ou **MongoDB**) para mais robustez.
+- [ ] Adicionar um sistema de autenticação de usuários.
+- [ ] Criar uma funcionalidade para o botão "Copiar Texto" nas mensagens.
+- [ ] Fazer o deploy da aplicação em uma plataforma como **Heroku**, **Vercel** ou **Render**.
+
+---
+
+Feito com ❤️ para a comunidade.
