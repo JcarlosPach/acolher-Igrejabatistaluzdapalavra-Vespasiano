@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acolher+ | IBLP Vespasiano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 C 20 10, 20 70, 50 70 S 80 10, 50 10 M50 10 C 80 10, 80 70, 50 70" fill="none" stroke="currentColor" stroke-width="5"/>
+                    <text x="50" y="45" font-family="Arial, sans-serif" font-size="18" fill="currentColor" text-anchor="middle" font-weight="bold">IBLP</text>
+                </svg>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-section="dashboard-section"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="form-section"><i class="fas fa-user-plus"></i><span>Novo Cadastro</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="list-section"><i class="fas fa-users"></i><span>Lista de Visitantes</span></a></li>
+                    <li><a href="#" class="nav-link" data-section="messages-section"><i class="fas fa-envelope"></i><span>Opções de Mensagens</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="main-title">Dashboard</h1>
+                <button id="new-visitor-btn" class="action-btn whatsapp-btn"><i class="fas fa-plus"></i> Novo Cadastro</button>
+            </header>
+
+            <!-- Seção Dashboard -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <i class="fas fa-users"></i>
+                        <div class="summary-info">
+                            <span class="summary-value" id="total-visitors">0</span>
+                            <span class="summary-label">Total de Visitantes</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-calendar-day"></i>
+                        <div class="summary-info">
+                            <span class="summary-value" id="visitors-this-month">0</span>
+                            <span class="summary-label">Visitantes no Mês</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-user-clock"></i>
+                        <div class="summary-info">
+                            <span class="summary-value" id="in-follow-up">0</span>
+                            <span class="summary-label">Em Acompanhamento</span>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <i class="fas fa-church"></i>
+                        <div class="summary-info">
+                            <span class="summary-value" id="integrated-count">0</span>
+                            <span class="summary-label">Integrados</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alerts-container">
+                    <h2>Alertas de Acompanhamento</h2>
+                    <div id="alerts-list">
+                        <!-- Alertas serão inseridos aqui pelo JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Formulário de Cadastro -->
+            <section id="form-section" class="content-section">
+                <div class="form-container">
+                    <form id="visitor-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone (WhatsApp):</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visit-date">Data da Visita:</label>
+                            <input type="date" id="visit-date" name="visit-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="first-contact-date">Data do Primeiro Contato:</label>
+                            <input type="date" id="first-contact-date" name="first-contact-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="follow-up-status">Status de Acompanhamento:</label>
+                            <select id="follow-up-status" name="follow-up-status">
+                                <option value="nao_informado" selected>Não Informado</option>
+                                <option value="em_acompanhamento">Em Acompanhamento</option>
+                                <option value="pretende_integrar">Pretende se Integrar</option>
+                                <option value="integrado">Integrado</option>
+                                <option value="apenas_visitando">Apenas Visitando</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Observações:</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Ex: Pedido de oração, interesse em algum ministério, etc."></textarea>
+                        </div>
+                        <button type="submit">Adicionar Visitante</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Seção Lista de Visitantes -->
+            <section id="list-section" class="content-section">
+                <div id="visitor-list">
+                    <!-- Os visitantes serão inseridos aqui pelo JavaScript -->
+                </div>
+            </section>
+
+            <!-- Seção Opções de Mensagens -->
+            <section id="messages-section" class="content-section">
+                <h2>Opções de Mensagens para Envio</h2>
+                <p>Esta seção pode conter modelos de mensagens de boas-vindas, acompanhamento, etc.</p>
+                <!-- Conteúdo futuro aqui -->
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modal de Edição (inicialmente oculto) -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Editar Visitante</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-visitor-id">
+                <!-- O conteúdo do formulário de edição será preenchido pelo JS -->
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Arquivos JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

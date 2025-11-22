@@ -1,0 +1,19 @@
+{
+  "messages": {
+    "welcome": "Seja muito bem-vindo(a) à nossa igreja! Ficamos imensamente felizes com a sua presença. Esperamos que tenha se sentido em casa e que a paz de Deus inunde seu coração. Sua visita é uma alegria para toda a nossa comunidade!",
+    "miss_you": "Olá! Sentimos sua falta em nosso último encontro e esperamos que esteja tudo bem. Saiba que sua presença é muito valiosa para nós e faz a diferença em nossa comunhão. Estamos orando por você e sua família!",
+    "membership_invitation": "Temos notado sua presença constante em nossa comunidade e ficamos muito felizes por isso! Gostaríamos de fazer um convite especial para que você considere se tornar um membro oficial de nossa igreja, unindo-se a nós nesta jornada de fé. Se tiver interesse em saber mais, estamos à sua disposição para conversar.",
+    "follow_up": "Olá, tudo bem? Gostaríamos de saber como você está e nos colocar à disposição para o que precisar. Se quiser conversar, pedir uma oração ou simplesmente tomar um café, saiba que estamos aqui para você. Um grande abraço!"
+  },
+  "visitors": [
+    {
+      "id": 1,
+      "name": "Exemplo Visitante",
+      "phone": "5511999998888",
+      "firstVisitDate": "2023-10-27",
+      "lastVisitDate": "2023-10-27",
+      "observations": "Este é um visitante de exemplo para demonstração.",
+      "status": "Novo"
+    }
+  ]
+}
